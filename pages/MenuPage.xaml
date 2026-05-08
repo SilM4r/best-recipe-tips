@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="best_recipe_tips.MenuPage">
+    <ScrollView>
+    <VerticalStackLayout>
+        <Label 
+            Text="Jídelníček"
+            FontSize="25"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="20"/>
+
+
+
+            <Grid
+            HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+                <Border
+                    Grid.Column="0"
+                    Stroke="#000000"
+                    StrokeThickness="4"
+                    Padding="16,8"
+                    Margin="20"
+                    HorizontalOptions="Center">
+                    <VerticalStackLayout 
+                                         Margin="20">
+                        <Label 
+                            Text="Seznam jídelníček"
+                            FontSize="25"
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Center"
+                            Margin="20"/>
+
+                        <VerticalStackLayout
+                            x:Name="ListRecipeLayout">
+
+                        </VerticalStackLayout>
+
+                    </VerticalStackLayout>
+                </Border> 
+                    <VerticalStackLayout Grid.Column="1"
+                                         MaximumWidthRequest="450">
+                <Label
+                            Text="Nutriční hodnoty*:"
+                            WidthRequest="300"
+                            FontSize="20"
+                            FontAttributes="Bold"/>
+                <Label 
+                            Text="Název                                                hodnota      "
+                            HorizontalOptions="Center"
+                            WidthRequest="350"/>
+                    <Label 
+                            x:Name="nutriHodnoty"
+                            Margin="20"
+                            FontFamily="Consolas"
+                            WidthRequest="360"
+                            HorizontalOptions="Center"/>
+                    <Label 
+                            Text="* Nutriční hodnoty všechny jídel ze seznamu (vždy je jedna porce)"/>
+
+                <Label 
+                            Margin="50"/>
+                <Label 
+                            FontSize="20"
+                            Text="Soupis všech ingrediencí"/>
+                    <Label
+                        x:Name="ingredienceText"/>
+                </VerticalStackLayout>
+        </Grid>
+        
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

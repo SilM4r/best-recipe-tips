@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="best_recipe_tips.ListRecipesPage">
+    <ScrollView>
+        <VerticalStackLayout
+            x:Name="MainVerticalStackLayout">
+
+            <Entry
+                x:Name="vyhledavac"
+                HorizontalOptions="Center"/>
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Vyhledat"
+                Clicked="CounterBtn_Clicked"
+                HorizontalOptions="Center" />
+
+            <FlexLayout
+                Margin="0,20,0,20"
+                Direction="Row"
+                Wrap="Wrap"
+                x:Name="RecepisFL">
+
+            </FlexLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

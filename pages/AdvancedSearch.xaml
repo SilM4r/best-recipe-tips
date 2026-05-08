@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="best_recipe_tips.AdvancedSearch">
+    <ScrollView>
+    <VerticalStackLayout>
+        <Label
+                Text="Pokročilé vyhledávání"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+        <VerticalStackLayout
+            HorizontalOptions="Center">
+            <VerticalStackLayout
+                Margin="10">
+                    <Label
+                    Text="Filtrujte podle počtu přísad"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="5"/>
+                    <Label
+                    Text="(MIN+, MIN-MAX, MAX), kde MIN a MAX jsou celá čísla. Příklad: 5-8"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="5"/>
+                <Entry
+                    x:Name="ingrText"
+                    WidthRequest="300"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout
+                Margin="10">
+                    <Picker x:Name="pickerDiet"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Title="Filtrujte podle diety">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>_</x:String>
+                            <x:String>balanced</x:String>
+                            <x:String>high-fiber</x:String>
+                            <x:String>high-protein</x:String>
+                            <x:String>low-carb</x:String>
+                            <x:String>low-fat</x:String>
+                            <x:String>low-sodium</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                        <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                </Picker>
+            </VerticalStackLayout>
+            <VerticalStackLayout
+                Margin="10">
+                <Label
+                    Text="Filtrujte podle zdravotních štítků (tagů)"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="5"/>
+                <Label
+                    Text="Do pole níže napište ty štítky které chcete a oddělte je ',' příklad: 'alcohol-cocktail,alcohol-free' Dostupné hodnoty:  alcohol-cocktail, alcohol-free, celery-free, crustacean-free, dairy-free, DASH, egg-free, fish-free, fodmap-free, gluten-free, immuno-supportive, keto-friendly, kidney-friendly, kosher, low-fat-abs, low-potassium, low-sugar, lupine-free, Mediterranean, mollusk-free, mustard-free, no-oil-added, paleo, peanut-free, pescatarian, pork-free, red-meat-free, sesame-free, shellfish-free, soy-free, sugar-conscious, sulfite-free, tree-nut-free, vegan, vegetarian, wheat-free"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    WidthRequest="600"
+                    Margin="5"/>
+                <Entry
+                    x:Name="healtText"
+                    WidthRequest="300"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout
+                Margin="10">
+                    <Picker x:Name="pickerNation"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Title="Druh kuchyně:">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>_</x:String>
+                            <x:String>American</x:String>
+                            <x:String>Asian</x:String>
+                            <x:String>British</x:String>
+                            <x:String>Caribbean</x:String>
+                            <x:String>Central Europe</x:String>
+                            <x:String>Chinese</x:String>
+                            <x:String>Eastern Europe</x:String>
+                            <x:String>French</x:String>
+                            <x:String>Indian</x:String>
+                            <x:String>Italian</x:String>
+                            <x:String>Japanese</x:String>
+                            <x:String>Kosher</x:String>
+                            <x:String>Mediterranean</x:String>
+                            <x:String>Mexican</x:String>
+                            <x:String>Middle Eastern</x:String>
+                            <x:String>Nordic</x:String>
+                            <x:String>South American</x:String>
+                            <x:String>South East Asian</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                        <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                </Picker>
+            </VerticalStackLayout>
+            <VerticalStackLayout
+                Margin="10">
+                    <Picker x:Name="pickerMealType"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Title="Typ jídla:">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>_</x:String>
+                            <x:String>Breakfast</x:String>
+                            <x:String>Dinner</x:String>
+                            <x:String>Lunch</x:String>
+                            <x:String>Snack</x:String>
+                            <x:String>Teatime</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                        <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                </Picker>
+            </VerticalStackLayout>
+            <VerticalStackLayout
+                Margin="10">
+                    <Picker x:Name="pickerdish"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Title="Druh pokrmu:">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>_</x:String>
+                            <x:String>Biscuits and cookies</x:String>
+                            <x:String>Bread</x:String>
+                            <x:String>Cereals</x:String>
+                            <x:String>Condiments and sauces</x:String>
+                            <x:String>Desserts</x:String>
+                            <x:String>Drinks</x:String>
+                            <x:String>Main course</x:String>
+                            <x:String>Pancake</x:String>
+                            <x:String>Preps</x:String>
+                            <x:String>Preserve</x:String>
+                            <x:String>Salad</x:String>
+                            <x:String>Sandwiches</x:String>
+                            <x:String>Side dish</x:String>
+                            <x:String>Soup</x:String>
+                            <x:String>Starter</x:String>
+                            <x:String>Sweets</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                        <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                </Picker>
+            </VerticalStackLayout>
+            <VerticalStackLayout
+                Margin="10">
+                    <Label
+                    Text="Filtrujte podle počtu kalorií"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="5"/>
+                    <Label
+                    Text="(MIN+, MIN-MAX, MAX), kde MIN a MAX můžou být desetiná čísla. Jednotky jsou kcal Příklad: '100-300'"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="5"/>
+                <Entry
+                    x:Name="CalorieText"
+                    WidthRequest="300"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout
+                Margin="10">
+                    <Label
+                    Text="Filtrujte podle celkové délky vaření"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="5"/>
+                    <Label
+                    Text="(MIN+, MIN-MAX, MAX) Příklad: '1+' vrátí recepty které jsou delší než jedna minuta "
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="5"/>
+                <Entry
+                    x:Name="TimeText"
+                    WidthRequest="300"/>
+            </VerticalStackLayout>
+             <VerticalStackLayout
+                Margin="10">
+                <Picker x:Name="pickerCO2"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Title="Filtrujte receptury podle jejich CO2 stopy (třídy):">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>_</x:String>
+                                <x:String>A+</x:String>
+                                <x:String>A</x:String>
+                                <x:String>B</x:String>
+                                <x:String>C</x:String>
+                                <x:String>D</x:String>
+                                <x:String>E</x:String>
+                                <x:String>F</x:String>
+                                <x:String>G</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                        <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                    </Picker>
+             </VerticalStackLayout>
+
+             <Button
+                Text="Vyhledat"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                Margin="50"/>
+
+            </VerticalStackLayout>
+    </VerticalStackLayout>
+   </ScrollView>
+</ContentPage>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="best_recipe_tips.DetailRecipe">
+    <ScrollView>
+        <Grid
+            HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="360"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Image
+                    x:Name="iconImage"
+                    HeightRequest="300"
+                    WidthRequest="300"
+                    Margin="20"
+                    VerticalOptions="StartAndExpand"/>
+
+                <VerticalStackLayout Grid.Column="1"
+                                     HorizontalOptions="Center">
+                    <Label
+                        x:Name="nadpisText"
+                        FontSize="Large"
+                        Margin="20"
+                        HorizontalOptions="Center"/>
+                    <Label
+                        x:Name="tagText"
+                        Text="12345678912345+"
+                        WidthRequest="300"
+                        HorizontalOptions="Center"
+                        Margin="10"/>
+
+                    <HorizontalStackLayout
+                        HorizontalOptions="Center">
+                        <Label
+                            Margin="10"
+                           Text="kalorie na porci:"/>
+                        <Label
+                            x:Name="calorieText"
+                            Margin="10"/>
+                    </HorizontalStackLayout>
+                    
+                    
+                    <HorizontalStackLayout
+                        HorizontalOptions="Center">
+                        <Label
+                            Text="Počet porcí:"
+                            VerticalOptions="Center"
+                            Margin="10"/>
+                        <Button
+                            Text="&lt;"
+                            Clicked="Button_PorceMinus"/>
+                        <Label
+                            x:Name="porceText"
+                            VerticalOptions="Center"
+                            Margin="10"
+                            Text="1"/>
+                        <Button
+                            Text=">"
+                            Clicked="Button_PorcePlus"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <VerticalStackLayout Grid.Column="0"
+                                     WidthRequest="500"
+                                     >
+                    <Label
+                        Text="Budete potřebovat:"
+                        HorizontalOptions="Center"
+                        Margin="10"
+                        FontSize="20"
+                        FontAttributes="Bold"/>
+                    <Label 
+                        x:Name="ingredienceText"
+                        HorizontalOptions="Center"
+                        WidthRequest="250"
+                        />
+                    <Label 
+                        Text="Postup naleznete na:"
+                        HorizontalOptions="Center"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        Margin="10"/>
+                    <Border Stroke="#C49B33"
+                        StrokeThickness="4"
+                        Background="#2B0B98"
+                        Padding="16,8"
+                        HorizontalOptions="Center"
+                        Margin="3">  
+                        
+                        <Label 
+                            Text="click here"
+                            TextColor="White"
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Center">
+
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
+                            </Label.GestureRecognizers>
+
+                        </Label>
+                    </Border>
+                    <Label
+                        x:Name="timeText"
+                        HorizontalOptions="Center"
+                        Margin="10"/>
+                        
+                    <Label
+                        x:Name="C2ClassText"
+                        HorizontalOptions="Center"
+                        Margin="5"/>
+                    <Label
+                        x:Name="WeightText"
+                        HorizontalOptions="Center"
+                        Margin="5"/>
+                    <Button
+                        x:Name="jidelnikBTN"
+                        Text="Přidat jídlo do jídelníčku"
+                        WidthRequest="210"
+                        Margin="10"
+                        Clicked="Button_Jidelak"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Grid.Column="1">
+
+                    <Label
+                            Text="Nutriční hodnoty jedný porce:"
+                            WidthRequest="300"
+                            FontSize="20"
+                            FontAttributes="Bold"/>
+                    <Label 
+                            Text="Název                                                hodnota      %*"
+                            HorizontalOptions="Center"
+                            WidthRequest="350"/>
+                    <Label 
+                            x:Name="nutriHodnoty"
+                            Margin="20"
+                            FontFamily="Consolas"
+                            WidthRequest="360"
+                            HorizontalOptions="Center"/>
+                    <Label 
+                            Text="*doporučená denni hodnota"/>
+
+                </VerticalStackLayout>
+
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

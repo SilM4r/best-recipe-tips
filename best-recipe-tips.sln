@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37216.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "best-recipe-tips", "best-recipe-tips.csproj", "{3C436E4F-74CA-44E6-B905-8ECE834F4C8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C436E4F-74CA-44E6-B905-8ECE834F4C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C436E4F-74CA-44E6-B905-8ECE834F4C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C436E4F-74CA-44E6-B905-8ECE834F4C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C436E4F-74CA-44E6-B905-8ECE834F4C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3702F70-8036-4430-A9F6-0804757557A7}
+	EndGlobalSection
+EndGlobal
